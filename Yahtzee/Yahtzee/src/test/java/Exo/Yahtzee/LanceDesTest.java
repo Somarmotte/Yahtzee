@@ -101,4 +101,23 @@ public class LanceDesTest {
         // Assertions.fail("not good");
 
     }
+
+    @Test
+    public void calculScoreSansFigureTest(){
+
+
+        //bloc arrange
+
+        String combinaison = "33224";
+        lanceDes lance = new lanceDes(combinaison);
+        //bloc act
+        int s;
+        s = lance.calculScore(combinaison);
+
+        //bloc assert
+        Assertions.assertEquals(4, s);
+
+        // Assertions.fail("not good");
+
+    }
 }

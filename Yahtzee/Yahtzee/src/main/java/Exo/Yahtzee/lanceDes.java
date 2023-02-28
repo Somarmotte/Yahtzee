@@ -94,7 +94,8 @@ public class lanceDes {
                     }
                 }
             }
-
+            //sans figure
+        score = listeSansDoub.get(listeSansDoub.size()-1);
 
         return score;
     }
