@@ -120,4 +120,23 @@ public class LanceDesTest {
         // Assertions.fail("not good");
 
     }
+
+    @Test
+    public void calculScoreFullTest(){
+
+
+        //bloc arrange
+
+        String combinaison = "33222";
+        lanceDes lance = new lanceDes(combinaison);
+        //bloc act
+        int s;
+        s = lance.calculScore(combinaison);
+
+        //bloc assert
+        Assertions.assertEquals(25, s);
+
+        // Assertions.fail("not good");
+
+    }
 }

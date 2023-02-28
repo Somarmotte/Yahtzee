@@ -44,16 +44,42 @@ public class lanceDes {
             old = listeSansDoub.get(i);
         }
 
+        //petite suite
         if (res == 4){
             score = 30;
             return score;
         }
-
+        //grande suite
         if (res == 5){
             score = 40;
             return score;
         }
 
+        //full
+        old = liste.get(0);
+        res = 1;
+        int max = res;
+        for (int i = 1; i < liste.size(); i++){
+            if (liste.get(i) == old){
+                res++;
+            }
+            else {
+                max = res;
+
+                if (max != 2 && max != 3) {
+                    break;
+                }
+
+            res = 1;
+
+            }
+            old = liste.get(i);
+        }
+
+        if ((max == 2 && res == 3)||(max == 3 && res == 2) ){
+            score = 25;
+            return score;
+        }
 
         //Yahtzee
             for (int j = 0; j < 6; j++) {
