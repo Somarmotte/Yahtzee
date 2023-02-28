@@ -1,6 +1,7 @@
 package Exo.Yahtzee;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import Exo.Yahtzee.lanceDes;
 
 
 public class LanceDesTest {
@@ -10,14 +11,16 @@ public class LanceDesTest {
     public void calculScoreTest(){
 
 
-     //   //bloc arrange
-        int score = 20;
-        
+        //bloc arrange
+
+        int combinaison = 12345;
+        lanceDes lance = new lanceDes(combinaison);
         //bloc act
-        int calcul = score + score;
+        int s;
+        s = lance.calculScore(combinaison);
 
         //bloc assert
-        Assertions.assertEquals(40, calcul);
+        Assertions.assertEquals(40, s);
 
        // Assertions.fail("not good");
 

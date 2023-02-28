@@ -2,15 +2,18 @@
 package Exo.Yahtzee;
 
 public class lanceDes {
-    public int score = 20;
+    public int score;
     public int combinaison;
 
     public lanceDes(int combinaison) {
         this.combinaison = combinaison;
+        this.score = score;
     }
 
-    public int calculScore() {
-        score = score +20;
+    public int calculScore(int combinaison) {
+        if (combinaison == 12345){
+            score = 40;
+        }
         return score;
     }
 
